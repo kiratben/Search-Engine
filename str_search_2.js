@@ -17,3 +17,15 @@ function occurP(s, subStr) {
     }
     return n;
 }
+
+function subStrSearch(strs, s) {
+      hash = {};
+
+  for (var i = 0; i < strs.length; i++) {
+    var subStr = strs[i];
+    hash[subStr] = occurP(s, subStr);
+  }
+  return hash;
+}
+
+module.exports = subStrSearch;
